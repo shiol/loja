@@ -6,7 +6,7 @@ $preco = $_GET['preco'];
 $link = mysqli_connect('localhost', 'root', '', 'loja', '3306');
 
 if (mysqli_connect_errno()) {
-    printf("erro: %s\n", mysqli_connect_error());
+    printf("Erro: %s\n", mysqli_connect_error());
     exit();
 }
 
@@ -26,8 +26,9 @@ $result = mysqli_query(
     values (\'' . $descricao . '\', ' . $custo . ', ' . $preco . ')'
 );
 
+echo '<h1>Cadastrar Produto</h1>';
 if ($result) {
-    echo 'produto inserido com sucesso: ' . $descricao;
+    echo 'Produto inserido com sucesso: ' . $descricao;
 }
 
 mysqli_close($link);
