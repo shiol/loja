@@ -1,15 +1,13 @@
 <h1>Produtos</h1>
 <p>
-    <a href="produto.cadastrar.php">Cadastrar</a>
-    /
-    <a href="http://localhost/phpmyadmin/">phpmyadmin</a>
+    <a href="produto.cadastrar.html">Cadastrar</a>
 </p>
 
 <?php
-$link = mysqli_connect('localhost', 'root', '', 'loja', '3306', '');
+$link = mysqli_connect('localhost', 'root', '', 'loja', '3306');
 
 if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
+    printf("erro: %s\n", mysqli_connect_error());
     exit();
 }
 
